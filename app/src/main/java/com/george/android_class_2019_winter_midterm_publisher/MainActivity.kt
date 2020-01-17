@@ -47,7 +47,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.viewModel = viewModel
 
-        setSupportActionBar(binding.toolbar)
         setupNavController()
 
 //        binding.fab.setOnClickListener {
