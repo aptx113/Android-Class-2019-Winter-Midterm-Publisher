@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Android-Class-2019-Winter-Midterm-Publisher'
