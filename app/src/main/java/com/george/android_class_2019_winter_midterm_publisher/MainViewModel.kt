@@ -6,10 +6,8 @@ import com.george.android_class_2019_winter_midterm_publisher.data.Article
 import com.george.android_class_2019_winter_midterm_publisher.data.Author
 import com.george.android_class_2019_winter_midterm_publisher.util.ArticleTagType
 import com.george.android_class_2019_winter_midterm_publisher.util.CurrentFragmentType
-import com.george.android_class_2019_winter_midterm_publisher.util.convertLongToDateString
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.Query
-import java.text.SimpleDateFormat
+
 import java.util.*
 
 class MainViewModel : ViewModel() {

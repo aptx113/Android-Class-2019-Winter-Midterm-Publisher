@@ -2,9 +2,9 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@android:id/background"
         android:gravity="center_vertical|fill_horizontal">
-        <shape android:shape="rectangle">
+        <shape>
             <corners android:radius="4dp"/>
-            <solid android:color="#cccccc" />
+            <solid android:color="#" />
         </shape>
     </item>
 </layer-list>

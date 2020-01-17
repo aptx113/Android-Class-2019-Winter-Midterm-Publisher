@@ -1,7 +1,7 @@
 package com.george.android_class_2019_winter_midterm_publisher.util
 
 enum class CurrentFragmentType(val value: String) {
-    HOME(""),
+    HOME("Articles"),
 //    CATALOG(getString(R.string.catalog)),
 //    CART(getString(R.string.cart)),
 //    PROFILE(getString(R.string.profile)),

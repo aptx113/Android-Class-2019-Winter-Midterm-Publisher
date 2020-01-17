@@ -1,19 +1,26 @@
 package com.george.android_class_2019_winter_midterm_publisher
 
+import android.os.Build
 import android.os.Bundle
+import android.util.DisplayMetrics
+import android.view.Gravity
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
+import androidx.test.core.app.ActivityScenario.launch
 import com.george.android_class_2019_winter_midterm_publisher.databinding.ActivityMainBinding
 import com.george.android_class_2019_winter_midterm_publisher.util.CurrentFragmentType
 
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.launch
+import java.util.logging.Logger
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +28,16 @@ class MainActivity : AppCompatActivity() {
     private val viewModel: MainViewModel by lazy {
         ViewModelProviders.of(this).get(MainViewModel::class.java)
     }
+
+    // get the height of status bar from system
+    private val statusBarHeight: Int
+        get() {
+            val resourceId = resources.getIdentifier("status_bar_height", "dimen", "android")
+            return when {
+                resourceId > 0 -> resources.getDimensionPixelSize(resourceId)
+                else -> 0
+            }
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,4 +87,5 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 }
