@@ -27,9 +27,9 @@ class MainViewModel : ViewModel() {
         val calendar = Calendar.getInstance().timeInMillis
         val author = Author("wayne@school.appworks.tw", "waynechen323", "AKA小安老師")
 
-        val data = Article(author,"​IU「亂穿」竟美出新境界！笑稱自己品味奇怪　網笑：靠顏值撐住女神氣場", "南韓歌手IU（李知恩）無論在歌唱方面或是近期的戲劇作品\n" +
-                "都有亮眼的成績，但俗話說人無完美、美玉微瑕，曾再跟工作人員的互動影片中坦言\n" +
-                "自己品味很奇怪，近日在IG上分享了宛如「媽媽們青春時代的玉女歌手」超復古穿搭\n" +
+        val data = Article(author,"​IU「亂穿」竟美出新境界！笑稱自己品味奇怪　網笑：靠顏值撐住女神氣場", "南韓歌手IU（李知恩）無論在歌唱方面或是近期的戲劇作品" +
+                "都有亮眼的成績，但俗話說人無完美、美玉微瑕，曾再跟工作人員的互動影片中坦言" +
+                "自己品味很奇怪，近日在IG上分享了宛如「媽媽們青春時代的玉女歌手」超復古穿搭" +
                 "造型，卻意外美出新境界。",calendar,document.id,ArticleTagType.Beauty)
 
         document.set(data)
