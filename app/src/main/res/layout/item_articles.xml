@@ -5,20 +5,25 @@
 
     <data>
 
+        <variable
+            name="article"
+            type="com.george.android_class_2019_winter_midterm_publisher.data.Article" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="16dp">
+        android:paddingTop="16dp">
 
         <TextView
             android:id="@+id/text_article_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="2"
             android:letterSpacing="0.15"
+            android:layout_marginHorizontal="16dp"
+            android:maxLines="2"
+            android:text="@{article.title}"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -29,12 +34,14 @@
         <TextView
             android:id="@+id/text_article_author"
             android:layout_width="wrap_content"
+            android:layout_marginHorizontal="16dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:letterSpacing="0.15"
             android:maxLines="2"
+            android:text="@{article.author.name}"
             android:textColor="@color/black"
             android:textSize="14sp"
-            android:letterSpacing="0.15"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
@@ -45,11 +52,13 @@
             android:id="@+id/text_article_tag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/custom_article_tag"
+            android:letterSpacing="0.15"
             android:maxLines="2"
+            android:layout_marginHorizontal="16dp"
+            android:text="@{article.tag.toString()}"
             android:textColor="@color/purple_700_dark"
             android:textSize="14sp"
-            android:letterSpacing="0.15"
-            android:background="@color/gray_cccccc"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -61,29 +70,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:maxLines="2"
             android:letterSpacing="0.15"
+            android:layout_marginHorizontal="16dp"
+            android:maxLines="2"
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_article_author"
-            app:layout_constraintHorizontal_bias="0"
+            app:time="@{article.createdTime}"
             tools:text="createdTime" />
 
         <TextView
+            android:id="@+id/text_article_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="8dp"
             android:letterSpacing="0.15"
             android:maxLines="2"
-            android:textSize="14sp"
+            app:layout_constraintVertical_bias="0"
+            android:text="@{article.content}"
             android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_article_createdTime"
+            tools:text="content" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/black_3f3a3a"
             app:layout_constraintBottom_toBottomOf="parent"
-            tools:text="content"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_article_content" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

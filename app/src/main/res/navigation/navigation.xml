@@ -5,6 +5,6 @@
 
     <fragment
         android:id="@+id/articleFragment"
-        android:name="com.george.android_class_2019_winter_midterm_publisher.article.ArticleFragment"
+        android:name="com.george.android_class_2019_winter_midterm_publisher.articles.ArticlesFragment"
         android:label="ArticleFragment" />
 </navigation>
